@@ -8,5 +8,8 @@ let minutes = date.getMinutes();
 let days = ["SUN", "MON", "TUE", "WED", "THUR", "FRI", "SAT"];
 let day = days[date.getDay()];
 
-document.querySelector("#currentDayOfTheWeek").innerHTML = `${day}`;
-document.querySelector("#currentUTCTime").innerHTML = `${hours}:${minutes}`;
+//document.querySelector("#currentDayOfTheWeek").innerHTML = `${day}`;
+//document.querySelector("#currentUTCTime").innerHTML = `${hours}:${minutes}`;
+
+document.querySelector('[data-testid="currentDayOfTheWeek"]').innerHTML = `${day}`;
+document.querySelector('[data-testid="currentUTCTime"]').innerHTML = `${hours}:${minutes}`;
