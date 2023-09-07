@@ -1,0 +1,59 @@
+body {
+    font-family: 'PT Mono', monospace;
+}
+
+
+h2 {
+    font-size: 25px;
+}
+
+img {
+    width: 50%;
+    object-fit: contain;
+    height: auto;
+    border-radius: 20px;
+}
+
+.image-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-content {
+    text-align: center;
+}
+
+.github {
+    text-align:center ;
+}
+
+.icon {
+    font-size: 40px;
+    color: black;
+}
+
+a  {
+    text-decoration: none;
+    color: blue;
+}
+
+p {
+    font-size: 20px;
+}
+
+@media (max-width:600px) {
+    img {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 25px;
+    }
+}
+
+
