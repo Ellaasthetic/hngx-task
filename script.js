@@ -1,6 +1,6 @@
 
 function utcTime() {
-    let days = ["SUN", "MON", "TUE", "WED", "THUR", "FRI", "SAT"];
+    let days = ["SUNDAY", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"];
     let currentDay = document.querySelector('[data-testid="currentDayOfTheWeek"]');
     let currentTime = document.querySelector('[data-testid="currentUTCTime"]');
     const setValue = (current, val) => {	current.innerHTML = val }
