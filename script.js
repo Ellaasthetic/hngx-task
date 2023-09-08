@@ -14,4 +14,4 @@ let day = days[date.getDay()];
  
 
 document.querySelector('[data-testid="currentDayOfTheWeek"]').innerHTML = `${day}`;
-document.querySelector('[data-testid="currentUTCTime"]').innerHTML = `${miliseconds}`;
+document.querySelector('[data-testid="currentUTCTime"]').innerHTML = `${hours}:${minutes}:${miliseconds}`;
