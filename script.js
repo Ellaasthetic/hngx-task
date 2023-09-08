@@ -1,17 +1,20 @@
-let date = new Date();
-let utcTime = date.toLocaleString('en-US', { timeZone: 'UTC'});
-console.log(utcTime);
 
-let hours = date.getHours();
-let minutes = date.getMinutes();
-let miliseconds = date.getMilliseconds();
+function utcTime() {
+    let days = ["SUN", "MON", "TUE", "WED", "THUR", "FRI", "SAT"];
+    let currentDay = document.querySelector('[data-testid="currentDayOfTheWeek"]');
+    let currentTime = document.querySelector('[data-testid="currentUTCTime"]');
+    const setValue = (current, val) => {	current.innerHTML = val }
+    setValue(currentDay, days[new Date().getUTCDay()])
+	window.setInterval(()=> {
+		setValue(currentDay, days[new Date().getUTCDay()])
+	}, 60000)
+	const timer = () => {
+		window.setInterval(() => {
+			setValue(currentTime, Date.now())
+			}, 100)
+ 	}
+	timer()
 
-let days = ["SUN", "MON", "TUE", "WED", "THUR", "FRI", "SAT"];
-let day = days[date.getDay()];
+}
 
-//document.querySelector("#currentDayOfTheWeek").innerHTML = `${day}`;
-//document.querySelector("#currentUTCTime").innerHTML = `${hours}:${minutes}`;
- 
-
-document.querySelector('[data-testid="currentDayOfTheWeek"]').innerHTML = `${day}`;
-document.querySelector('[data-testid="currentUTCTime"]').innerHTML = `${hours}:${minutes}:${miliseconds}`;
+window.addEventListener('DOMContentLoaded', (event) => { utcTime() });
