@@ -1,20 +1,18 @@
-/*let date = new Date();
-let utcTime = date.toLocaleString('en-US', { timeZone: 'UTC'});
+let date = new Date();
+//let utcTime = date.toLocaleString('en-US', { timeZone: 'UTC'});
+let utcTime = new Date(date.getTime() + (date.getTimezoneOffset() * 60000) + (60 * 60000));
 console.log(utcTime);
 
-let hours = date.getHours();
-let minutes = date.getMinutes();
-let miliseconds = date.getMilliseconds();
+//let hours = date.getHours();
+//let minutes = date.getMinutes();
+let miliseconds = utcTime.getTime();
 
 let days = ["SUN", "MON", "TUE", "WED", "THUR", "FRI", "SAT"];
-let day = days[date.getDay()];*/
+let day = days[date.getDay()];
 
 //document.querySelector("#currentDayOfTheWeek").innerHTML = `${day}`;
 //document.querySelector("#currentUTCTime").innerHTML = `${hours}:${minutes}`;
-
-const hours = Math.floor(miliseconds / (1000 * 60 * 60));
-const minutes =Math.floor((miliseconds % (1000 * 60 * 60))/ (1000 * 60)); 
-const seconds = Math.floor((miliseconds % (1000 * 60 ))/ 1000 ); 
+ 
 
 document.querySelector('[data-testid="currentDayOfTheWeek"]').innerHTML = `${day}`;
-document.querySelector('[data-testid="currentUTCTime"]').innerHTML = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+document.querySelector('[data-testid="currentUTCTime"]').innerHTML = `${miliseconds}`;
