@@ -7,7 +7,7 @@ function utcTime() {
     setValue(currentDay, days[new Date().getUTCDay()])
 	window.setInterval(()=> {
 		setValue(currentDay, days[new Date().getUTCDay()])
-	}, 60000)
+	}, 1000)
 	const timer = () => {
 		window.setInterval(() => {
 			setValue(currentTime, Date.now())
