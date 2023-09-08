@@ -1,5 +1,5 @@
 let date = new Date();
-let utcTime = date.toLocaleString('en-US', { timeZone: 'UTC+1'});
+let utcTime = date.toLocaleString('en-US', { timeZone: 'UTC'});
 console.log(utcTime);
 
 let hours = date.getHours();
