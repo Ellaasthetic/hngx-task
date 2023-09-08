@@ -1,11 +1,10 @@
 let date = new Date();
-//let utcTime = date.toLocaleString('en-US', { timeZone: 'UTC'});
-let utcTime = new Date(date.getTime() + (date.getTimezoneOffset() * 60000) + (60 * 60000));
+let utcTime = date.toLocaleString('en-US', { timeZone: 'UTC+1'});
 console.log(utcTime);
 
-//let hours = date.getHours();
-//let minutes = date.getMinutes();
-let miliseconds = utcTime.getTime();
+let hours = date.getHours();
+let minutes = date.getMinutes();
+let miliseconds = date.getMilliseconds();
 
 let days = ["SUN", "MON", "TUE", "WED", "THUR", "FRI", "SAT"];
 let day = days[date.getDay()];
